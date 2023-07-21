@@ -1,8 +1,15 @@
-
+<?php
+session_start();
+if (! isset($_SESSION['userdata'])) {
+  header("location: login.html");
+}
+ 
+ $userdata = $_SESSION['userdata'];
+ ?>
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Document</title>
+  <title>Dashboard</title>
   <style>
     * {
       padding: 0;
@@ -45,7 +52,7 @@
     }
   </style>
 
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <!-- <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script>
     $(document).ready(function() {
       $('a[data-page]').click(function(event) {
@@ -54,7 +61,7 @@
         $('#content-container').load(pageName + '.html');
       });
     });
-  </script>
+  </script> -->
 </head>
 
 <body>
@@ -63,16 +70,29 @@
       <div class="left">Online Voting System</div>
       <div class="right">
         <ul>
-          <li><a href="home.html" data-page="home">Home</a></li>
-          <li><a href="aboutus.html" data-page="aboutus">About Me</a></li>
-          <li><a href="contactus.html" data-page="contactus">Contact Me</a></li>
-          <li><a href="#">Logout</a></li>
+          <!-- <li><a href="home.html" onclick="location.href='dashboard.html';"  data-page="home">Home</a></li> -->
+
+         <li><a href="">Home</a></li>
+          <li><a href="aboutus.html">About Me</a></li>
+          <li><a href="contactus.html">Contact Me</a></li>
+          <li><a href="logoutt.php">Logout</a></li>
         </ul>
       </div>
     </nav>
   </header>
+ <!-- <div class="profile">
+  <b>Userame:</b><?php echo $data['username'] ?> <br><br>
+  <b>Phone:</b> <?php echo $data['phone'] ?><br><br>
+  <b>Roll:</b><?php echo $data['roll'] ?> <br><br>
+  <b>Status</b><?php echo $data['role'] ?> <br> 
+</div>-->
+<b>Username:</b> <?php echo $userdata['username'] ?> <br><br>
+<b>Phone number:</b>  <?php echo $userdata['phone'] ?> <br><br>
+<b>Roll number:</b>  <?php echo $userdata['roll'] ?> <br><br>
+<b>Status:</b> <?php echo $userdata['status'] ?>
 
-  <div id="content-container"></div>
+
+ 
 </body>
 
 </html>

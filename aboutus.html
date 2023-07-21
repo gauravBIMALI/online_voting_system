@@ -1,71 +1,133 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-     <meta charset="UTF-8">
-     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <title>About Us</title>
-     <style>
-          body{
-               font-family: sans-serif ;
-          }
-          #about {
-  padding: 40px;
-  background-color: #f0f0f0;
-}
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
 
-#about h2 {
-  text-align: center;
-  font-size: 28px;
-  margin-bottom: 20px;
-}
+  <link rel="dashboard" href="dashboard.php">
+  <style>
+    * {
+      padding: 0;
+      margin: 0;
+    }
 
-.about-content {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-}
+    body {
+      font-family: sans-serif;
+    }
 
-.about-content img {
-  width: 200px;
-  height: 200px;
-  border-radius: 50%;
-  margin-right: 20px;
-}
+    nav {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      background-color: rgb(66, 65, 64);
+      height: 60px;
+    }
 
-.description {
-  flex: 1;
-}
+    nav ul {
+      display: flex;
+      justify-content: center;
+      font-weight: bold;
+    }
 
-.description p {
-  margin-bottom: 20px;
-  line-height: 1.5;
-}
+    nav ul li {
+      list-style: none;
+      margin: 0px 25px;
+    }
 
-     </style>
+    nav ul li a {
+      text-decoration: none;
+      color: black;
+    }
+
+    nav ul li a:hover {
+      color: rgb(243, 235, 235);
+      font-size: 1.05rem;
+    }
+    .left {
+        font-size: large;
+        font-weight: bold;
+      }
+
+    #about {
+      padding: 40px;
+      background-color: #f0f0f0;
+    }
+
+    #about h2 {
+      text-align: center;
+      font-size: 28px;
+      margin-bottom: 20px;
+    }
+
+    .about-content {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .about-content img {
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      margin-right: 20px;
+    }
+
+    .description {
+      flex: 1;
+    }
+
+    .description p {
+      margin-bottom: 20px;
+      line-height: 1.5;
+    }
+  </style>
 </head>
+
 <body>
-     <section id="about">
-          <h2>About Us</h2>
-          <div class="about-content">
-            <img src="pp1.jpg" alt="Profile Picture">
-            <div class="description">
-              <p>
-                Hi, I'm Gaurav Bimali, a beginner web developer with a focus on front-end development. I am currently doing Batchelor in  Computer Application(BCA) and learning to built responsive and user-friendly websites.
-              </p>
-              <p>
-                My skills include HTML5, CSS3, JavaScript, Java  and C. I have worked on various projects. I enjoy creating clean and intuitive interfaces that enhance the user experience.
-              </p>
-              <p>
-                In my free time, I like to explore new technologies and stay up-to-date with the latest trends in web development. I'm a problem solver at heart, I can contribute my skills and learn from others.
-              </p>
-              <p>
-                Please feel free to browse through my portfolio to see some of my recent projects. If you have any inquiries or would like to collaborate, don't hesitate to reach out to me. I'm excited to connect with fellow developers and clients alike.
-              </p>
-            </div>
-          </div>
-        </section>
-         
+  <header>
+    <nav>
+      <div class="left">Online Voting System</div>
+      <div class="right">
+        <ul>
+          <li><a href="dashboard.php"> Home </a></li>
+          <li><a href="aboutus.html">About Me </a></li>
+          <li><a href="contactus.html"> Contact Me </a></li>
+          <li><a href="logoutt.php">Logout</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+  <section id="about">
+    <h2>About Us</h2>
+    <div class="about-content">
+      <img src="pp1.JPG" alt="Profile Picture">
+      <div class="description">
+        <p>
+          Hi, I'm Gaurav Bimali, a beginner web developer with a focus on front-end development. I am currently doing
+          Batchelor in Computer Application(BCA) and several years of experience in building responsive and
+          user-friendly websites.
+        </p>
+        <p>
+          My skills include HTML5, CSS3, JavaScript, Java and C. I have worked on various projects. I enjoy creating
+          clean and intuitive interfaces that enhance the user experience.
+        </p>
+        <p>
+          In my free time, I like to explore new technologies and stay up-to-date with the latest trends in web
+          development. I'm a problem solver at heart, I can contribute my skills and learn from others.
+        </p>
+        <p>
+          Please feel free to browse through my portfolio to see some of my recent projects. If you have any inquiries
+          or would like to collaborate, don't hesitate to reach out to me. I'm excited to connect with fellow developers
+          and clients alike.
+        </p>
+      </div>
+    </div>
+  </section>
+
 </body>
+
 </html>

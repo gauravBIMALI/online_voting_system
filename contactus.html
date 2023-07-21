@@ -7,16 +7,51 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Contact Us</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  
+
   <style>
-    body{
-      
+    body {
+      font-family: sans-serif;
       background-color: #8ecffa;
     }
+
     * {
       margin: 0;
       padding: 0;
     }
+
+    nav {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      background-color: rgb(66, 65, 64);
+      height: 60px;
+    }
+
+    nav ul {
+      display: flex;
+      justify-content: center;
+      font-weight: bold;
+    }
+
+    nav ul li {
+      list-style: none;
+      margin: 0px 25px;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: black;
+    }
+
+    nav ul li a:hover {
+      color: rgb(243, 235, 235);
+      font-size: 1.05rem;
+    }
+    .left {
+        font-size: large;
+        font-weight: bold;
+      }
+
     form {
       margin-bottom: 20px;
       margin-left: 10px;
@@ -28,6 +63,7 @@
       font-weight: bold;
       margin-bottom: 5px;
     }
+
     input[type="text"],
     input[type="email"],
     textarea {
@@ -37,11 +73,12 @@
       border: 2px solid #ccc;
       border-radius: 10px;
     }
-    #message{
+
+    #message {
       width: 30%;
       height: 100px;
     }
-    
+
     input[type="submit"] {
       background-color: #4CAF50;
       color: white;
@@ -50,25 +87,42 @@
       border-radius: 4px;
       cursor: pointer;
     }
+
     input[type="submit"]:hover {
       background-color: #45a049;
     }
+
     p {
       margin-bottom: 10px;
       font-size: 20px;
       font-weight: bold;
       margin-left: 8px;
     }
+
     a {
       margin-left: 8px;
       font-size: 20px;
       font-weight: bold;
     }
+    
   </style>
 </head>
 
 <body>
-  <form action="/contact" method="post">
+  <header>
+    <nav>
+      <div class="left">Online Voting System</div>
+      <div class="right">
+        <ul>
+          <li><a href="dashboard.php"> Home </a></li>
+          <li><a href="aboutus.html">About Me </a></li>
+          <li><a href="contactus.html"> Contact Me </a></li>
+          <li><a href="logoutt.php">Logout</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+  <form action="contact" method="post">
     <label for="name">Name:</label>
     <input type="text" id="name" name="name" required><br>
 
@@ -85,8 +139,8 @@
   <p>Contact Details:</p>
   <p>Phone: 9800042123</p>
   <p>Email: gauravbimali2060@gmail.com</p>
-  <p>Follow us on social media:</p>
-  <a href="https://facebook.com">Facebook</a>
+  <p>Follow us on social media: <a href="https://facebook.com">Facebook</a> </p>
+
 </body>
 
 </html>
