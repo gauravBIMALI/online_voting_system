@@ -1,17 +1,20 @@
+
 <?php
 session_start();
 if (! isset($_SESSION['userdata'])) {
   header("location: login.html");
 }
- 
  $userdata = $_SESSION['userdata'];
  ?>
-<!DOCTYPE html>
-<html>
-<head>
-  <title>Dashboard</title>
-  <style>
-    * {
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Profile</title>
+     <style>
+      * {
       padding: 0;
       margin: 0;
       font-family: sans-serif;
@@ -45,47 +48,23 @@ if (! isset($_SESSION['userdata'])) {
       color: rgb(243, 235, 235);
       font-size: 1.05rem;
     }
-
     .left {
       font-size: 20px;
       font-weight: bold;
       text-transform: capitalize;
     }
-    
-    .group{
-      padding: 15px;
-      margin:85px 10px 0px 10px;
-      /* top margin is 85px
-         right margin is 10px
-         bottom margin is 0px
-         left margin is 10px */
-      border-radius: 10px;
-      background-color:coral;
-      width: 60%;
-      text-align: center;
-      float: right;
-    }
-  </style>
+   
 
-  <!-- <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-  <script>
-    $(document).ready(function() {
-      $('a[data-page]').click(function(event) {
-        event.preventDefault();
-        var pageName = $(this).data('page');
-        $('#content-container').load(pageName + '.html');
-      });
-    });
-  </script> -->
-</head>
 
-<body>
-  <header>
-    <nav>
+
+    </style>
+ </head>
+ <body>
+ <nav>
       <div class="left">Welcome to Online Voting System - <?php echo $userdata['username'] ?></div>
       <div class="right">
         <ul>
-         <li><a href="">Home</a></li>
+         <li><a href="dashboard.php">Home</a></li>
           <!-- <li><a href="aboutus.html">About Me</a></li>
           <li><a href="contactus.html">Contact Me</a></li> -->
           <li><a href="profile.php">My profile</a></li>
@@ -93,13 +72,13 @@ if (! isset($_SESSION['userdata'])) {
         </ul>
       </div>
     </nav>
-  </header>
- 
+    
+ <div>
 
-
-<div class="group">
-
+<b>Username:</b> <?php echo $userdata['username'] ?> <br><br>
+<b>Phone number:</b>  <?php echo $userdata['phone'] ?> <br><br>
+<b>Roll number:</b>  <?php echo $userdata['roll'] ?> <br><br>
+<b>Status:</b> <?php echo $userdata['status'] ?>
 </div>
-</body>
-
-</html>
+ </body>
+ </html>
