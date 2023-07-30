@@ -2,7 +2,7 @@
 session_start();
 ?>
 
-<!-- header.php -->
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -60,9 +60,9 @@ session_start();
       <div class="right">
         <ul>
          <li><a href="../admin_dashboard.php">Home</a></li>
-          <li><a href="../admin/admin_dashboard/add_election.php">Add election</a></li> 
-          <li><a href="../admin/admin_dashboard/add_candidate.php">Add candidate</a></li>
-          <li><a href="../admin/admin_dashboard/logout.php">Logout</a></li>
+          <li><a href="add_election.php">Add election</a></li> 
+          <li><a href="add_candidate.php">Add candidate</a></li>
+          <li><a href="logout.php">Logout</a></li>
         </ul>
       </div>
     </nav>   
