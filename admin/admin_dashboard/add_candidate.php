@@ -1,5 +1,11 @@
 <?php
 include("../admin_connect.php");
+
+// session_start();
+// if (!isset($_SESSION['user_id'])) {
+//     header("Location: admin_login.php");
+//     exit();
+// }
 ?>
 <!DOCTYPE html>
 <html>
@@ -199,7 +205,7 @@ include("../admin_connect.php");
               <th scope="col">Name</th>
               <th scope="col">Details</th>
               <th scope="col">Election</th>
-              <th scope="col">Action</th>
+              <!-- <th scope="col">Action</th> -->
             </tr>
           </thead>
           <tbody>
@@ -230,10 +236,10 @@ include("../admin_connect.php");
                   <td>
                     <?php echo $election_name ?>
                   </td>
-                  <td>
+                  <!-- <td>
                     <a href="#" class="edit">Edit</a>
                     <a href="#" class="Delete">Delete</a>
-                  </td>
+                  </td> -->
                 </tr>
                 <?php
               }

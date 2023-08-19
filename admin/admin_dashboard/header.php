@@ -55,7 +55,8 @@ session_start();
     <header>
     <nav>
      
-      <div class="left">Welcome to Online Voting System: <?php echo $_SESSION['admin_username'];?>
+       <div class="left">Online Voting System
+       <!--  <?php echo $_SESSION['admin_username'];?> -->
       </div>
       <div class="right">
         <ul>

@@ -12,7 +12,12 @@
         $password = mysqli_real_escape_string($connect, $password);
         $phone = mysqli_real_escape_string($connect, $phone);
 
-        $insert = mysqli_query($connect, "INSERT INTO admin1 (username, phone, password) VALUES ('$username', '$phone', '$password')");
+        // $insert = mysqli_query($connect, "INSERT INTO admin1 (username, phone, password) VALUES ('$username', '$phone', '$password')");
+
+        // Hash the password
+        $hashed_password = password_hash($password, PASSWORD_DEFAULT);
+
+        $insert = mysqli_query($connect, "INSERT INTO admin1 (username, phone, password) VALUES ('$username', '$phone', '$hashed_password')");
         
         if ($insert) {
             echo '<script>

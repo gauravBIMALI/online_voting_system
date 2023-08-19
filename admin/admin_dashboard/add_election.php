@@ -1,6 +1,3 @@
-<!-- <?php
-include("../admin_connect.php");
-?> -->
 
 <?php
 include("../admin_connect.php");
@@ -240,17 +237,29 @@ if (isset($_POST['addElectionBtn'])) {
   $starting_date = mysqli_real_escape_string($connect, $_POST['starting_date']);
   $ending_date = mysqli_real_escape_string($connect, $_POST['ending_date']);
 
-  $inserted_on = date("y-m-d");
+  // $inserted_on = date("y-m-d");
 
-  $date1 = date_create($inserted_on);
-  $date2 = date_create($starting_date);
-  $diff = date_diff($date1, $date2);
+  // $date1 = date_create($inserted_on);
+  // $date2 = date_create($starting_date);
+  // $diff = date_diff($date1, $date2);
 
-  if ($diff->format("%R %a days") > 0) {
-    $status = "Inactive";
-  } else {
-    $status = "Active";
-  }
+  // if ($diff->format("%R %a days") > 0) {
+  //   $status = "Inactive";
+  // } else {
+  //   $status = "Active";
+  // }
+
+$inserted_on = date("Y-m-d"); // Use uppercase Y for a 4-digit year.
+
+$date1 = new DateTime($inserted_on); // Use DateTime class for proper date comparisons.
+$date2 = new DateTime($starting_date);
+$diff = $date1->diff($date2);
+
+if ($diff->days > 0) { // Use ->days to access the days property.
+  $status = "Inactive";
+} else {
+  $status = "Active";
+}
 
   //Inserting these value in election table
   mysqli_query($connect, "Insert into elections(election_topic,number_of_candidates,starting_date,ending_date,status,inserted_on) Values('" . $election_topic . "','" . $number_of_candidates . "','" . $starting_date . "','" . $ending_date . "','" . $status . "','" . $inserted_on . "')") or die(mysqli_error($connect));

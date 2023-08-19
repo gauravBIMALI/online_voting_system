@@ -1,5 +1,12 @@
+
 <?php
 include("../admin_connect.php");
+// this code is for if user try to access do this page directly system will throw him out to login_page
+// session_start();
+// if (!isset($_SESSION['user_id'])) {
+//     header("Location: login.php");
+//     exit();
+// }
 
 // Check if the edit form is submitted
 if (isset($_POST['updateElectionBtn'])) {

@@ -1,8 +1,7 @@
 <?php
-    // admin_login.php
-
     // Include the database connection file
     include("admin_connect.php");
+
 
     if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $username = $_POST['username'];
@@ -17,12 +16,7 @@
         $result = mysqli_query($connect, $query);
 
         if ($result && mysqli_num_rows($result) > 0) {
-            // User authenticated, proceed with login actions
-            // For example:
-            // Start a session
-            // Set session variables or create cookies to maintain login state
-            // Redirect the user to a dashboard or home page
-
+ 
             session_start();
             $_SESSION['admin_username'] = $username;
 
